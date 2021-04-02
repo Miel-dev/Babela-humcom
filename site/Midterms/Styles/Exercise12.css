@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;  color: #ffff;   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',  sans-serif;
+}
+body{ width: 100%; 
+background-color: lightblue;
+}
+
+#main, header, footer{
+    width:95%;  margin: 10px auto;      
+}
+header, footer, .hero, .ad, .body, .Sidebar, article, section{
+    height: 200px;
+    background-color: rgb(0, 81, 255);
+    width: 100%;
+    padding: 15px;
+}
+footer{
+    height: 100px;
+}
+.ad{
+    background-color: darkblue;
+    text-align: center;
+}
+.grid-container, .grid-container2, .grid-container2a, .grid-container3, .grid-container3a{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 10% 64.5% auto ;
+    grid-gap: 25px;
+    margin-top: 70pt;
+    
+}
+.grid-container{
+    text-align: center;
+    
+}
+.grid-container>.col-1{    
+    height: 50px;
+    background-color: darksalmon;    
+}
+.grid-container2{
+    grid-template-columns: 76.8% auto ;
+    margin-top: unset;
+}
+
+.grid-container2a{    
+    grid-template-columns: 65% auto ;
+    margin-top: 0%;
+    margin-right: 10px;
+    text-align: center;
+}
+.grid-container3{
+    grid-template-columns:76.8% auto   ;
+    margin-top: 8pt;
+    
+}
+.grid-container3a{    
+    grid-template-columns: auto 76.8%;
+    margin-top: 0%;
+    margin-right: 10px;
+    text-align: center;
+}
+.grid-container2a>.herosec{    
+    height: 150px;
+    background-color: darksalmon;    
+}
+.grid-container3a>.bodysec{
+    height: 300px;
+    background-color: darksalmon;
+}
+.body, .Sidebar{
+    height: auto;
+}
+.sidebarfeat{
+    height: 300px;
+    width: 95%;
+    margin: 10pt;
+    background-color: darksalmon;
+    padding: 15px;
+}
+
+@media screen and (max-width:1024px){  /*Small Laptop Screen */
+    body{
+        background-color: lightcoral;
+    }
+    .grid-container2{    
+        
+        grid-template-columns: 100%;
+    }  
+    .ad{
+        width: 25%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:980px){     /*Tablet Screen */
+    body{
+        background-color: lightgreen;
+    }
+    header{
+        height: auto;
+    }
+    .grid-container{    
+        margin: auto;
+        grid-template-columns: 75%;
+        text-align: center;
+        
+    } 
+    .ad{
+        width: 25%;
+        margin: auto;
+    }
+    .grid-container3a{
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (max-width:480px){     /*Small Phone Screen */
+    body{
+        background-color: lightseagreen;
+    }
+    header{
+        height: auto;
+    }
+    .ad{
+        width: 50%;
+        margin: auto;
+    }
+    .grid-container{    
+        margin: auto;
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+    .hero{
+        height: auto;
+    }
+    .grid-container2a{
+        grid-template-columns: 100%;
+    } 
+    .grid-container3{
+        grid-template-columns: 100%;
+    }
+    .grid-container3a{
+        grid-template-columns: 100%;
+    }
+}
